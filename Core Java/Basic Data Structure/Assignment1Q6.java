@@ -8,6 +8,7 @@ package Assignment;
 import java.util.*;
 class Login{
     String userId = "Ajay",password = "password";
+    int c=0;
     Scanner sc = new Scanner(System.in);
     public String getUser()
     {
@@ -21,16 +22,16 @@ class Login{
 	    String  pass=sc.next();
 	     return pass;
     }
-    public String loginUser(String user, String pass,int c) {
+    public String loginUser(String user, String pass) {
     	  user=getUser();
 		  pass=getPassword();
     if(user.equals(userId)&&pass.equals(password))
     return "welcome"+" "+user;
     c++;
-    if(c<=3)
+    if(c<3)
     {
        System.out.println("You have entered wrong credentials ,please enter the right credentials.");
-       loginUser(user,pass,c);
+       loginUser(user,pass);
     }
     
      return "You have entered wrong credentials 3 times"+"\n"+"Contact Admin";
@@ -44,9 +45,7 @@ public class Assignment1Q6 {
 		
 		Login lg=new Login();
 		String user="",pass="";
-		int i=1;
-		
-		System.out.println(lg.loginUser(user, pass,i));
+		System.out.println(lg.loginUser(user, pass));
 	}
 
 }
