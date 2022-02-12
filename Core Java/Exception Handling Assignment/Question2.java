@@ -19,19 +19,20 @@ class Exception1{
 	}
 	public void getOutput()
 	{
-		if(Divisor==0)
-		{
-			try {
-			throw new UnsupportedOperationException("UnsupportedOperationException: Divisor can not be 0");
+		
+		  try {
+			  if(Divisor==0)
+			 throw new UnsupportedOperationException();
+			
+				System.out.print("Result = "+(Dividend/Divisor));
+				
 			}catch(UnsupportedOperationException ex)
 			{
-				System.out.println(ex.getMessage());
+				System.out.println("UnsupportedOperationException: Divisor can not be 0");
 			}
 			finally {
 				sc.close();
 			}
-		}
-		System.out.print("Result = "+(Dividend/Divisor));
 		
 	}
 }
