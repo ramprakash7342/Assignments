@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question2</title>
+</head>
+<body>
+    
+    <Script>
+
+        var arr=[1, 2, 3, 4, 5];
+        
+        function square(a){
+            return a*a;
+        }
+
+        function sqrt(a){
+             return Math.sqrt(a);
+         }
+
+        function map(arr,func){
+
+             var arr1=[];
+
+             if(arr.length===0)
+             {
+                 return arr;
+             }
+             arr1.push(func(arr[0]));
+
+             return arr1.concat(map(arr.slice(1),func));
+        }
+        
+        document.write(map(arr,square)+"<br><br>");
+        document.write(map(map(arr,square),sqrt));
+
+     
+
+    </Script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd" >
+
+
+<beans>
+<bean id="customer" class="question1UsingConstuctorInjection.Customer" >
+    <constructor-arg index="0" value="1234"/>
+    <constructor-arg index="2"  value="8938838299" />
+    <constructor-arg index="1" value="Sanjay Sharma"/>
+    <constructor-arg index="3" ref="address"/>
+</bean>
+  
+     
+	<bean id="address" class="question1UsingConstuctorInjection.Address">
+	    <constructor-arg  index="0" value="Sahawazpur"/>
+	    <constructor-arg  index="1" value="Budaun"/>
+	    <constructor-arg  index="2" value="Utter Pradesh"/>
+	    <constructor-arg  index="3" value="243640"/>
+	    <constructor-arg  index="4" value="India"/>
+	</bean>
+</beans>

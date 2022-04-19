@@ -1,0 +1,42 @@
+*{
+    margin-left: 20px;
+}
+h2,p{
+    display: inline;
+    margin-left: 38px;
+}
+.EmployeeForm{
+    text-align: left;
+    margin-top: 20px;
+}
+.EmployeeTable{
+    text-align: left;
+}
+label{
+    font-size: 15px;
+    font-weight: 700;
+}
+button{
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+input{
+    width: 70%;
+    height: 30px;
+    font-size: 17px;
+}
+.view{
+    text-align: left;
+
+}
+
+table thead tr th{
+    width: 290px;
+    border-bottom: 1px solid gray;
+}
+table tbody tr td{
+    border-bottom: 1px solid gray;
+}

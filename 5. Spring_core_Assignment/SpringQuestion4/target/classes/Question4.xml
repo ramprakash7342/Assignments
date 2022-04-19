@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="account1" class="com.Question4_Assignment.BankAccount">
+		<constructor-arg type="long" value="1161" />
+		<constructor-arg value="Nitesh" />
+		<constructor-arg value="Current" />
+		<constructor-arg type="double" value="10000" />
+	</bean>
+
+	<bean id="account2" class="com.Question4_Assignment.BankAccount">
+		<constructor-arg type="long" value="1201" />
+		<constructor-arg value="Mohit" />
+		<constructor-arg value="Savings" />
+		<constructor-arg type="double" value="20000" />
+	</bean>
+	<context:annotation-config />
+	<context:component-scan
+		base-package="com.Question4_Assignment" />
+	<context:annotation-config />
+
+</beans>

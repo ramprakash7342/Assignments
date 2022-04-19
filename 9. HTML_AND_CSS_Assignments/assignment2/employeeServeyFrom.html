@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fill The Form</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                background-color: rgb(246, 220, 224);
+            }
+            .servey{
+
+                border: 2px black solid;
+                margin: 10%;
+            }
+            .servey h1{
+                padding: 20px;
+                text-align: center;
+            }
+            .values{
+                margin-left: 20%;
+            }
+            .inputbox{
+                gap: 20px;
+                margin-left: 20px;
+                
+                padding: 10px;
+            }
+            .rating{
+                display: grid;
+                grid-template-columns:repeat(6,1fr);
+                margin-right: 50px;
+                
+            }
+            .rating div{
+                border: 1px solid black;
+            }
+            .rating div input{
+               width: 50px;
+            }
+            #ans{
+                width: 600px;
+                height: 100px;
+            }
+            #submit{
+                margin-left:35% ;
+                background-color: rgb(235, 90, 90);
+                color: white;
+                font-size: 15px;
+                padding: 10px;
+                border-radius: 10px;
+                margin-bottom: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="servey">
+            <h1>Employee Satisfaction Survey</h1>
+            <hr>
+            <div class="values">
+                <form action="">
+                    <label for="name" class="inputbox">Employee Name</label><br><br>
+                    <input type="text"  placeholder="Firstname" class="inputbox">
+                    <input type="text"  placeholder="Lastname" class="inputbox"><br><br><br>
+
+                    <label for="date" class="inputbox">Date</label><br><br>
+                    <input type="date" class="inputbox"><br><br><br>
+
+                    
+                    <p class="inputbox">How would you describe your overall level of job satisfaction?</p>
+                    <input class="inputbox" type="radio" name="question" value="Very Satisfied" id="option-1">
+                    <label for="option-1">Very Satisfied</label> <br>
+                    <input class="inputbox" type="radio" name="question" value="Somewhat Satisfied" id="option-2">
+                    <label for="option-2">Somewhat Satisfied</label> <br>
+                    <input class="inputbox" type="radio" name="question" value="Neutral" id="option-3">
+                    <label for="option-3">Neutral</label> <br>
+                    <input class="inputbox" type="radio" name="question" value="Somewhat Dissatisfied" id="option-4">
+                    <label for="option-4">Somewhat Dissatisfied</label> <br>
+                    <input class="inputbox" type="radio" name="question" value="Very Disstisfied" id="option-5">
+                    <label for="option-5">Very Disstisfied</label>      <br><br><br>  
+                    
+
+                    <p class="inputbox">How would you rate the following?</p>
+
+                    <div class="rating">
+                         <div></div>
+                         <div>Very Poor</div>
+                         <div>Poor</div>
+                         <div>Average</div>
+                         <div>Good</div>
+                         <div>Excellent</div>
+
+                         <div>Salary</div>
+                         <div><input type="radio" name="salary"></div>
+                         <div><input type="radio" name="salary"></div>
+                         <div><input type="radio" name="salary"></div>
+                         <div><input type="radio" name="salary"></div>
+                         <div><input type="radio" name="salary"></div>
+
+                         <div>Overall benefits</div>
+                         <div><input type="radio" name="Overall benefits"></div>
+                         <div><input type="radio" name="Overall benefits"></div>
+                         <div><input type="radio" name="Overall benefits"></div>
+                         <div><input type="radio" name="Overall benefits"></div>
+                         <div><input type="radio" name="Overall benefits"></div>
+
+                         <div>Health benefits</div>
+                         <div><input type="radio" name="Health benefits"></div>
+                         <div><input type="radio" name="Health benefits"></div>
+                         <div><input type="radio" name="Health benefits"></div>
+                         <div><input type="radio" name="Health benefits"></div>
+                         <div><input type="radio" name="Health benefits"></div>
+
+                         <div>Physiacl work environment</div>
+                         <div><input type="radio" name="environment"></div>
+                         <div><input type="radio" name="environment"></div>
+                         <div><input type="radio" name="environment"></div>
+                         <div><input type="radio" name="environment"></div>
+                         <div><input type="radio" name="environment"></div>
+
+                         <div>Senior leadership</div>
+                         <div><input type="radio" name="leadership"></div>
+                         <div><input type="radio" name="leadership"></div>
+                         <div><input type="radio" name="leadership"></div>
+                         <div><input type="radio" name="leadership"></div>
+                         <div><input type="radio" name="leadership"></div>
+
+                         <div>Individual management</div>
+                         <div><input type="radio" name="management"></div>
+                         <div><input type="radio" name="management"></div>
+                         <div><input type="radio" name="management"></div>
+                         <div><input type="radio" name="management"></div>
+                         <div><input type="radio" name="management"></div>
+
+                         <div>Performance feedback</div>
+                         <div><input type="radio" name="Performance"></div>
+                         <div><input type="radio" name="Performance"></div>
+                         <div><input type="radio" name="Performance"></div>
+                         <div><input type="radio" name="Performance"></div>
+                         <div><input type="radio" name="Performance"></div>
+
+                         <div>Employee evaluations</div>
+                         <div><input type="radio" name="evaluations"></div>
+                         <div><input type="radio" name="evaluations"></div>
+                         <div><input type="radio" name="evaluations"></div>
+                         <div><input type="radio" name="evaluations"></div>
+                         <div><input type="radio" name="evaluations"></div>
+                    </div>
+                    <br><br><br>
+
+                    <p>Do you feel valued at work?</p>
+                    <input type="radio" value="yes" name="dicision">
+                    <label for="yes">Yes</label><br>
+                    <input type="radio" value="no" name="dicision">
+                    <label for="no">No</label><br><br>
+
+                    <p>If No, Please Explain</p>
+                    <textarea name="ans" id="ans" cols="30" rows="10" placeholder="type here...."></textarea>
+                    
+                    <br><br><br>
+
+                    <p>Do you have the resources you need to perform your job well?</p>
+                    <input type="radio" value="yes" name="dicision1">
+                    <label for="yes">Yes</label><br>
+                    <input type="radio" value="no" name="dicision1">
+                    <label for="no">No</label><br><br>
+
+                    <p>If No, Please Explain</p>
+                    <textarea name="ans" id="ans" cols="30" rows="10" placeholder="type here...."></textarea>
+
+                    <br><br><br>
+
+                    <p>Does your job cause you stress or anxiety?</p>
+                    <input type="radio" value="yes" name="dicision2">
+                    <label for="yes">Yes</label><br>
+                    <input type="radio" value="no" name="dicision2">
+                    <label for="no">No</label><br><br>
+
+                    <p>If No, Please Explain</p>
+                    <textarea name="ans" id="ans" cols="30" rows="10" placeholder="type here...."></textarea>
+                
+                    <br><br><br>
+
+                    <p>Please Provide Any Additional Feedback</p>
+                    <textarea name="ans" id="ans" cols="30" rows="10" placeholder="type here...."></textarea>
+                    
+                    <br><br>
+                    <input type="submit" id="submit">
+                    
+                </form>
+
+            </div>
+            
+        </div>
+    </body>
+</html>

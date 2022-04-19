@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question10</title>
+</head>
+<body>
+    <script>
+    
+        var number = parseInt(prompt('Enter the number of terms: '));
+        var n1 = 0, n2 = 1, nextTerm;
+
+        console.log('Fibonacci Series:');
+
+        for (var i = 1; i <= number; i++) {
+            document.write(n1+"<br>");
+            nextTerm = n1 + n2;
+            n1 = n2;
+            n2 = nextTerm;
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question13</title>
+</head>
+<body>
+    
+    <Script>
+
+        var arr=[12,14,32,34,25];
+
+        var sum=0;
+
+        for(var index=0;index<arr.length;index++)
+        {
+            sum+=arr[index];
+        }
+        document.write("Sum_Using_For_Loop = "+sum);
+
+
+        sum=0;
+        var index=0;
+        while(index<arr.length){
+              sum+=arr[index];
+              index++;
+        }
+        document.write("<br>Sum_Using_While_Loop = "+sum);
+    
+        sum=0;
+        var index=0;
+        do{
+              sum+=arr[index];
+              index++;
+        }while(index<arr.length)
+        document.write("<br>Sum_Using_Do_While_Loop = "+sum);
+
+    </Script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question2</title>
+</head>
+<body>
+    <script>
+           
+           function square(x){
+            return x*x;
+           }
+
+           function double(x){
+            return 2*x;
+            }
+
+            function composed(func1, func2) {
+                return function (value) {
+                    return func1(func2(value));
+                
+                };
+            }
+
+            var func1 = composed(square, double);
+            document.write("For composed(square, double) :" + func1(5));
+            document.write("<br>For composed(square, double) :" + func1(10));
+
+            var func2 = composed(double, square);
+            document.write("<br>For composed(double,square) :" + func2(5));
+            document.write("<br>For composed(double,square) :" + func2(10));
+    </script>
+</body>
+</html>

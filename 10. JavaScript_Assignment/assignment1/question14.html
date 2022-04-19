@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question14</title>
+</head>
+<body>
+    <Script>
+
+        const ARRAY_LENGTH = parseInt(prompt("Enter the length of the array: "));
+
+        const randomArray = [];
+        for(let i = 0; i<ARRAY_LENGTH; i++) 
+        {
+            randomArray.push(Math.round(Math.random()*ARRAY_LENGTH));
+        }
+         
+        document.write("Array= "+randomArray);
+       
+        
+        var minElement=Infinity;
+        var maxElement=0;
+        var sum=0;
+        var countEven=0;
+        var countOdd=0;
+
+
+        for(var i=0;i<ARRAY_LENGTH;i++){
+            if(randomArray[i]>maxElement)
+            maxElement=randomArray[i];
+
+            if(randomArray[i]<minElement)
+            minElement=randomArray[i];
+
+            sum+=randomArray[i];
+
+            if(randomArray[i]%2==0){
+                countEven++;
+            }else{
+                countOdd++;
+            }
+        }
+
+        document.write("<br><br>MaxElement = "+maxElement);
+        document.write("<br><br>MinElement = "+minElement);
+        if(countEven>countOdd){
+           document.write("<br><br>Count of Even numbers is high and it is "+countEven);    
+        }else{
+            document.write("<br><br>Count of Odd numbers is high and it is "+countOdd);   
+        }
+        document.write("<br><br>Average of all numbers = "+sum/ARRAY_LENGTH);
+
+    </Script>
+</body>
+</html>

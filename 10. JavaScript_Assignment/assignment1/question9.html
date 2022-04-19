@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question9</title>
+</head>
+<body>
+    
+    <script>
+        
+         var list1=['a','b','c'];
+         var list2=[1,2,3];
+         
+        function arrConcat(list1,list2)
+        {
+            var totalLength = list1.length+list2.length;
+            var list = [];
+            var j=0,k=0;
+            for(var i=0; i<totalLength;i++) {
+                if(i%2==0) {
+                list[i]=list1[j++];
+                } else {
+                list[i]=list2[k++];
+                }
+        }
+            return list;
+        }
+        
+        document.write(arrConcat(list1 ,list2));
+        
+    </script>
+</body>
+</html>

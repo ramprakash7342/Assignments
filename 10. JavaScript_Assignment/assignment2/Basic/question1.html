@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question1</title>
+</head>
+<body>
+    <script>
+        
+        function square(x){
+            return x*x;
+        }
+        function double(x){
+            return 2*x;
+        }
+
+        function composedValue(square,double,num){
+            return square(double(num));
+        }
+         
+        var num=parseInt(prompt("Enter the number"));
+        document.write( composedValue(square,double,num));
+    </script>
+</body>
+</html>

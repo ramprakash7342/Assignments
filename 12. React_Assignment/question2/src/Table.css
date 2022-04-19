@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+table{
+   margin-left: auto;
+   margin-right: auto;
+}
+tr td{
+    border-bottom: 1px solid silver ;
+    padding-right: 100px;
+    padding-bottom: 10px;
+    
+}
+tr th{
+    border-bottom: 1px solid silver ;
+    padding-right: 100px;
+    padding-bottom: 10px;
+    
+}
+hr{
+    max-width: 100%;
+}

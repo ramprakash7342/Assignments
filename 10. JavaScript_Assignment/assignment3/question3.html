@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question3</title>
+</head>
+<body>
+    <script>
+    
+        // var h=parseInt(prompt("Enter height:"));
+        // var w=parseInt(prompt("Enter width:"));
+        
+        
+
+        class Rectangle{
+
+            constructor(width,height){
+                this.width=width;
+                this.height=height;
+            }
+
+        }
+
+        Rectangle.prototype.getArea=function(){
+            return this.width*this.height;
+        }
+        var rectangle=new Rectangle(4,5);
+        rectangle.height=50;
+        console.log(rectangle,"Area : "+rectangle.getArea());
+    </script>
+</body>
+</html>

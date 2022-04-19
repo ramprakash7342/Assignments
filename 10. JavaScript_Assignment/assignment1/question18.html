@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question18</title>
+</head>
+<body>
+    <script>
+        var str="The quick brown fox";
+        str=str[0].toLowerCase()+str.slice(1);
+
+        var splStr=str.split(" ");
+        var str1="";
+         splStr.forEach(function(element) {
+             element=element.substr(1,)+element[0]+"ay";
+             str1=str1+element+" ";
+        });
+
+         str1=str1[0].toUpperCase()+str1.slice(1);
+        document.write(str1);
+    </script>
+</body>
+</html>

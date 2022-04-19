@@ -1,0 +1,40 @@
+*{
+    padding: 0;
+    text-align: center;
+    font-weight: 500;
+}
+nav ul li{
+    list-style: none;
+    display: inline;
+    padding: 20px;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+p{
+    color: rgb(158, 172, 185);
+    font-weight: 700;
+    font-size: 20px;
+}
+nav ul li:hover{
+    background-color: rgb(207, 67, 121);
+}
+nav ul{
+   margin-top: 15px;
+ 
+}
+
+nav {
+    background-color: rgb(125, 153, 204);
+    border: 1px solid black;
+    display: inline-block;
+    text-align: center;
+    height: 55px;
+    width: 420px;
+}
+span{
+    background-color: rgb(197, 197, 243);
+    color: white;
+    padding: 5px;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question2</title>
+</head>
+<body>
+    <script>
+
+            var num=parseInt(prompt("Enter the number: "));
+
+            document.write("Given number= "+num);
+
+            var sum=0;
+
+            for(var i=1;i<=num;i++){
+                if(i%3==0 || i%5==0)
+                sum=sum+i;
+            }
+
+            document.write("<br><br>Sum of multiple of 3 and 5 between 1 to "+num+" including "+num+" is "+sum);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns:context="http://www.springframework.org/schema/context" 
+xsi:schemaLocation="http://www.springframework.org/schema/beans 
+http://www.springframework.org/schema/beans/spring-beans.xsd 
+http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd" 
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+ xmlns="http://www.springframework.org/schema/beans" >
+
+	
+		
+       <context:component-scan base-package="assignment"/>
+     
+        <bean id="center" class="assignment.point">
+				<property name="x" value="0"/>
+				<property name="y" value="0"/>
+		</bean>
+        
+        
+        <bean id="triangle" class="assignment.Triangle">
+        <property name="pointA" ref="pointA"/>
+        </bean>
+        
+        <bean id="pointA" class="assignment.point">
+				<property name="x" value="0"/>
+				<property name="y" value="0"/>
+		</bean>
+		<bean id="point" class="assignment.point">
+				<property name="x" value="20"/>
+				<property name="y" value="10"/>
+		</bean>
+		<bean id="pointC" class="assignment.point">
+				<property name="x" value="0"/>
+				<property name="y" value="10"/>
+		</bean>
+       <!--  
+        <bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"/>	
+         <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/> -->
+       <context:annotation-config/>
+</beans>

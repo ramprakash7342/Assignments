@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question15</title>
+</head>
+<body>
+    <script>
+        var arr=[64, 34, 25, 12, 22, 11, 90];
+
+        document.write("Array before bubble Sort : "+arr);
+
+        function swap(arr, i, j){
+            var temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+        }
+
+        function bubbleSort(arr){
+           for(var i=0;i<arr.length-1;i++){
+               for(var j=0;j<arr.length-i-1;j++){
+                   
+                    if (arr[j] > arr[j+1])
+                    {
+                    swap(arr,j,j+1);
+                    
+                    }
+               }
+           }
+           return arr;
+        }
+
+        document.write("<br><br>Array after bubble Sort : "+bubbleSort(arr));
+    </script>
+</body>
+</html>

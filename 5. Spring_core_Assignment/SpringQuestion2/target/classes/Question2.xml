@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd" >
+
+<beans>
+		<bean id="question" class="question2.Question">
+		<property name="questionId" value="01"/>
+		<property name="question" value="Write Your favorite fruits name?"/>
+				<property name="answersList">
+					<list>
+						<value>Apple</value>
+						<value>Orange</value>
+						<value>Banana</value>
+						<value>Grape</value>
+					</list>
+				</property>
+				<property name="answersSet">
+					<set>
+				        <value>Apple</value>
+						<value>Orange</value>
+						<value>Banana</value>
+						<value>Grape</value>
+					</set>
+				</property>
+			   <property name="answersMap">
+					<map>
+					  <entry>
+					  <key><value>1</value></key>
+					  <value>Apple</value>
+					  </entry>
+                      
+                      <entry>
+					  <key><value>2</value></key>
+					  <value>Orange</value>
+					  </entry>
+					  <entry>
+					  <key><value>3</value></key>
+					  <value>Banana</value>
+					  </entry>
+					  <entry>
+					  <key><value>4</value></key>
+					  <value>Grape</value>
+					  </entry>
+					</map>
+				</property> 
+		</bean>	
+</beans>
