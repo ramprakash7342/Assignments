@@ -3,6 +3,8 @@ package com.casestudy.cartservice.controller;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -19,14 +21,12 @@ import com.casestudy.cartservice.service.CartService;
 import io.swagger.v3.oas.annotations.Operation;
 
 
-
-
-
 @RestController
 @CrossOrigin
 @RequestMapping("/cart")
 public class CartResource {
 	
+	private Logger  logger=LoggerFactory.getLogger(CartResource.class);
 	
 	@Autowired
 	private CartService cartService;
@@ -41,6 +41,8 @@ public class CartResource {
 		item =calls.getProductDetails(itemId);
 		cartService.addItem(item);
 		
+		logger.info("Item is added in Item Repo");
+		
 	    Cart cart=new Cart();
 	    
 	    cart.setCartId(calls.getCartId(email));
@@ -49,6 +51,8 @@ public class CartResource {
 	    
 	    cartService.updateCart(cart, cart.getCartId());
 		
+	    logger.info("Cart is updated after Item addition");
+	    
 		return item;
 	}
 	
@@ -63,7 +67,7 @@ public class CartResource {
 	public void updateItem(@PathVariable int quantity,@PathVariable int id,@PathVariable String email) {
 		
 		cartService.updateItem(quantity, id);
-		
+		logger.info("Item is updated in Item Repo");
 
 	    Cart cart=new Cart();
 	    
@@ -72,6 +76,8 @@ public class CartResource {
 	    cart.setTotalPrice(cartService.ItemTotal());
 	    
 	    cartService.updateCart(cart, cart.getCartId());
+	    
+	    logger.info("Cart is updated after Item Updation");
 	}
 	
 	@GetMapping("/gettotal")
@@ -81,8 +87,10 @@ public class CartResource {
 	
 	@DeleteMapping("/delete/{id}/{email}")
 	public void deleteItem(@PathVariable int id,@PathVariable String email) {
+		
 		cartService.deleteItem(id);
 		
+		logger.info("Item is deleted from Item Repo");
 
 	    Cart cart=new Cart();
 	    
@@ -91,12 +99,15 @@ public class CartResource {
 	    cart.setTotalPrice(cartService.ItemTotal());
 	    
 	    cartService.updateCart(cart, cart.getCartId());
+	    
+	    logger.info("Cart is updated after Item deletion");
 	}
 	
 	@DeleteMapping("/delete-all/{email}")
 	public void deleteAllItems(@PathVariable String email) {
-		cartService.deleteAllItems();
 		
+		cartService.deleteAllItems();
+		logger.info("All Items are deleted from Item Repo");
 
 	    Cart cart=new Cart();
 	    
@@ -105,6 +116,7 @@ public class CartResource {
 	    cart.setTotalPrice(cartService.ItemTotal());
 	    
 	    cartService.updateCart(cart, cart.getCartId());
+	    logger.info("Cart id Update after all Items deletion");
 	}
 	
 	@GetMapping("/get-cart/{cartId}")

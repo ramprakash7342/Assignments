@@ -137,7 +137,7 @@ public class ProfileResource {
 		merchant.setProfileId(sequenceGeneratorService.generateSequence(UserProfile.SEQUENCE_NAME));
 		logger.info("New Merchant profile is saved successfully");
 		
-		return profileService.addNewCustomerProfile(merchant);
+		return profileService.addNewMerchantProfile(merchant);
 	}
 	
 	
@@ -156,7 +156,7 @@ public class ProfileResource {
 			deliveryagent.setProfileId(sequenceGeneratorService.generateSequence(UserProfile.SEQUENCE_NAME));
 			logger.info("Delivery Agent Profile saved successfully");
 			
-			return profileService.addNewCustomerProfile(deliveryagent);
+			return profileService.addNewDeliveryProfile(deliveryagent);
 	}
 	
 	
